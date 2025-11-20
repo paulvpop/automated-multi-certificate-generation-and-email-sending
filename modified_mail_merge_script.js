@@ -135,7 +135,7 @@ function sendEmails(subjectLine, sheet=SpreadsheetApp.getActiveSheet()) {
     const attachments = [];
   
     // Replace with your specific folder ID or path
-    const SPECIFIC_FOLDER_ID = '1s1fpaqWvDtQ_6UYsGVGNQNbVPg1F0Nv5'; // Get this from the folder URL in Google Drive
+    const SPECIFIC_FOLDER_ID = '2s3fpaqRvDtQ_6UTsGVGNENbVPg1F0Nv6'; // Get this from the folder URL in Google Drive
   
     try {
       // Get the specific folder by ID (most reliable)
