@@ -100,8 +100,17 @@ Then replace the string at line 138 in the Apps Script code (SPECIFIC_FOLDER_ID)
 
 ### Step 11
 
-Now, everything is set and you just need to press on the button 'Mail Merge' in the auto-email-sender sheet, and press 'Sent Emails':
+Now, everything is set and you need to press on the button 'Mail Merge' in the auto-email-sender sheet, and press 'Sent Emails':
 <img width="1081" height="178" alt="image" src="https://github.com/user-attachments/assets/fa70e813-f712-4537-b3a8-680cd47bc905" />
+
+### Step 12
+
+Authorise all the permissions (all of the code is non-malicious and completely safe). 
+
+### Step 13
+
+When the following screen pops up, add the subject line there and run it:
+<img width="709" height="340" alt="Screenshot from 2025-11-20 23-56-26" src="https://github.com/user-attachments/assets/e8d700da-7852-444e-ad3a-f8f64e86b3a1" />
 
 Cross-check if the emails have gone by checking your 'Sent' folder. The 'Email Sent' column will now be populated by the date when it was sent (the current date).
 
