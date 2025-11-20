@@ -53,23 +53,61 @@ Then, copy-paste the three columns, 'Full Name','Recipient','Attachment' from th
 
 <img width="760" height="400" alt="Screenshot from 2025-11-20 21-53-18" src="https://github.com/user-attachments/assets/17a96340-a94b-4258-8881-5bde668883bc" />
 <br>
-The above file will already have the Apps Script (javascript) in the extensions, which is why it shows the 'Mail Merge' button. I adapted this script from the original source code of Mail Merge, after some modifications for attachment of files uploaded in a google drive.
+The above file will already have the Apps Script (javascript) in the extensions, which is why it shows the 'Mail Merge' button. I adapted this script from the original source code of Mail Merge (by Martin Hawksey), after some modifications for attachment of files uploaded in a google drive.
 
-#### Pathway 1 (slightly harder):
+#### Pathway 2 (slightly harder):
 
 Upload the 'certificate_sharing_helper.csv' into your google drive, and then open it with Google Sheets. There will be two additional columns on the left (serial number and 'type'). Ignore them. They won't affect the next steps.
 
 Click on the Extensions -> Apps Script
 
-<img width="760" height="400" alt="Screenshot from 2025-11-20 22-20-46" src="https://github.com/user-attachments/assets/80da4823-258b-46a9-b5e2-65c1ae6e6b79" />
+<img width="760" height="400" alt="Screenshot from 2025-11-20 23-02-57" src="https://github.com/user-attachments/assets/f030770f-4bef-4f6e-b24c-bc1dd28dcd55" />
 
 
+This will lead to the following window:
+<img width="760" height="400" alt="Screenshot from 2025-11-20 22-24-28" src="https://github.com/user-attachments/assets/169fa92e-3cf8-4780-97f9-2b0c352c5eb2" />
+
+Remove/delete the above selected text/code and instead copy-paste the code [from here][5] onto the empty space.
+
+Then save it:
+<br>
+<img width="760" height="400" alt="Screenshot from 2025-11-20 22-29-04" src="https://github.com/user-attachments/assets/62691cff-ef1c-4f86-afde-648bbf325874" />
+
+### Step 8
+
+Create a draft email. The text within the two curly brackets are columns in the auto-email-sender sheet. For example, the following case, Full Name is added within the curly brackets. This means, in the multiple emails that will be sent out, the names will be changed (taken sequentially from the rows of the column 'Full Name'. So, the email will first go to Marie Curie, then Charles Darwin, then Nikola Tesla...with the {{Full Name}} replaced by Marie Curie, Charles Darwin, Nikola Tesla etc
+
+<img width="700" height="650" alt="Screenshot from 2025-11-20 22-52-05" src="https://github.com/user-attachments/assets/baf4fe8e-6760-4125-99c9-466d798ca8c7" />
+<br>
+If there are additional columns like 'type' as seen under 'Pathway 2', then that too can be added as a variable in the draft:
+<img width="700" height="650" alt="image" src="https://github.com/user-attachments/assets/69974ffc-870e-44fd-8b4c-49d661ae8cdf" />
 
 
-Then, copy-paste the 
+### Step 9
+
+Copy the subject line of the email. In this case, it is "Certificate for the Global Bird Quiz".
+
+Open the Apps Script of auto-email-sender sheet (if not already open) and replace the subject line "Certificate for the event XYZ" in the script at line 62, with the copied subject line of the draft email <br>
+<img width="1439" height="214" alt="image" src="https://github.com/user-attachments/assets/db108fdd-e613-404f-b9ab-c4d963ceab0f" />
+
+### Step 10
+
+Copy the folder id from the url bar of the google drive folder containing the attachments (the alphanumeric string after the 'folders/'):
+<img width="1052" height="202" alt="image" src="https://github.com/user-attachments/assets/8261926f-52be-4ea5-89f2-3de33eb129da" />
+
+Then replace the string at line 138 in the Apps Script code (SPECIFIC_FOLDER_ID) with the copied string:
+<img width="1439" height="214" alt="image" src="https://github.com/user-attachments/assets/99a6aa90-63d2-4743-976a-d7531239a7e5" />
+
+### Step 11
+
+Now, everything is set and you just need to press on the button 'Mail Merge' in the auto-email-sender sheet, and press 'Sent Emails':
+<img width="1081" height="178" alt="image" src="https://github.com/user-attachments/assets/fa70e813-f712-4537-b3a8-680cd47bc905" />
+
+Cross-check if the emails have gone by checking your 'Sent' folder. The 'Email Sent' column will now be populated by the date when it was sent (the current date).
 
 
 [1]: https://cran.rstudio.com/
 [2]: https://posit.co/download/rstudio-desktop/
 [3]: https://github.com/paulvpop/automated-multi-certificate-generation-and-email-sending/blob/main/R_script_for_automated_multi_certificate_generation.R
 [4]: https://docs.google.com/spreadsheets/d/1ef2fK6pnlln8ad-JIGuaF3_u58qQmuwpNlmpqssBg8A/edit?usp=sharing
+[5]: https://github.com/paulvpop/automated-multi-certificate-generation-and-email-sending/blob/main/modified_mail_merge_script.js
