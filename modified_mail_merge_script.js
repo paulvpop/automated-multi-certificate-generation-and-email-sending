@@ -59,7 +59,7 @@ function sendEmails(subjectLine, sheet=SpreadsheetApp.getActiveSheet()) {
   }
   
   // Gets the draft Gmail message to use as a template
-  const emailTemplate = getGmailTemplateFromDrafts_("Participation certificate for the India Ecoacoustics Network Bioacoustics Workshop");
+  const emailTemplate = getGmailTemplateFromDrafts_("Certificate for the event XYZ");
   
   // Gets the data from the passed sheet
   const dataRange = sheet.getDataRange();
