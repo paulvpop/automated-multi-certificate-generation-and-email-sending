@@ -1,6 +1,6 @@
 ## **Steps involved**
 
-Skip to step       if you only want to send emails to multiple people
+Skip to step 7 if you only want to send emails to multiple people
 
 ### Step 1 
 Create a/multiple template certificate(s) using any image/slide editing software of your choice. Canva is easiest choice as they have some pre-made certificate templates that are free to you, which you can modify. 
@@ -27,6 +27,8 @@ This will produce both the individual certificates for each participant as well 
 Create a Google Drive folder (name it appropriately) and upload all the certificates generated in the previous step there, along with the certificate_sharing_helper.csv
 
 ### Step 7
+
+If you don't have any attachments, you can simply create fill up the 'Full Name' and 'Recipient' columns (and also have an empty 'Email Sent' column) as seen below.
 
 There are two ways to do step 7:
 
@@ -82,6 +84,8 @@ Open the Apps Script of auto-email-sender sheet (if not already open) and replac
 
 ### Step 10
 
+Skip if you don't have any attachments.
+
 Copy the folder id from the url bar of the google drive folder containing the attachments (the alphanumeric string after the 'folders/'):
 <img width="1052" height="202" alt="image" src="https://github.com/user-attachments/assets/8261926f-52be-4ea5-89f2-3de33eb129da" />
 
@@ -99,7 +103,7 @@ Authorise all the permissions (all of the code is non-malicious and completely s
 
 ### Step 13
 
-Make sure that there is nothing in the 'Email Sent' column.
+Make sure that there is nothing in the 'Email Sent' column. **Note that you can only send 100 emails in this manner per day using free Gmail**
 
 When the following screen pops up, add the subject line there and run it:
 <img width="709" height="340" alt="Screenshot from 2025-11-20 23-56-26" src="https://github.com/user-attachments/assets/e8d700da-7852-444e-ad3a-f8f64e86b3a1" />
