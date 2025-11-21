@@ -95,12 +95,16 @@ Now, everything is set and you need to press on the button 'Mail Merge' in the a
 
 ### Step 12
 
-Authorise all the permissions (all of the code is non-malicious and completely safe). 
+Authorise all the permissions (all of the code is non-malicious and completely safe), including multi-factor authentification if asked. I have used this script for years, and there is no security concern.
 
 ### Step 13
 
+Make sure that there is nothing in the 'Email Sent' column.
+
 When the following screen pops up, add the subject line there and run it:
 <img width="709" height="340" alt="Screenshot from 2025-11-20 23-56-26" src="https://github.com/user-attachments/assets/e8d700da-7852-444e-ad3a-f8f64e86b3a1" />
+
+Once the script starts running, **DO NOT** write or edit the sheet in any way until the script runs completely.
 
 Cross-check if the emails have gone by checking your 'Sent' folder. The 'Email Sent' column will now be populated by the date when it was sent (the current date).
 
